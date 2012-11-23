@@ -6,8 +6,15 @@ import org.andengine.opengl.texture.atlas.source.ITextureAtlasSource;
 import org.andengine.opengl.util.GLState;
 
 /**
- * (c) 2010 Nicolas Gramlich
- * (c) 2011 Zynga Inc.
+ * A Texture is a 'image' in the memory of the graphics chip. On Android the
+ * width and height of a Texture has to be a power of 2. Therefore AndEngine
+ * assembles a Texture from a couple of ITextureSources, so the space can be
+ * used better. <br>
+ * 一个Texture是一个
+ * '图片'在内存中的图形片段。在操作系统一个质地的宽度和高度有是2的度。因此andengine集成一个Texture从一对itexturesources，所以空间可以被使用更好
+ * 。 <br>
+ * <br>
+ * (c) 2010 Nicolas Gramlich (c) 2011 Zynga Inc.
  * 
  * @author Nicolas Gramlich
  * @since 14:55:02 - 08.03.2010
@@ -38,10 +45,17 @@ public abstract class Texture implements ITexture {
 
 	/**
 	 * @param pPixelFormat
-	 * @param pTextureOptions the (quality) settings of the Texture.
-	 * @param pTextureStateListener to be informed when this {@link Texture} is loaded, unloaded or a {@link ITextureAtlasSource} failed to load.
+	 * @param pTextureOptions
+	 *            the (quality) settings of the Texture.
+	 * @param pTextureStateListener
+	 *            to be informed when this {@link Texture} is loaded, unloaded
+	 *            or a {@link ITextureAtlasSource} failed to load.
 	 */
-	public Texture(final TextureManager pTextureManager, final PixelFormat pPixelFormat, final TextureOptions pTextureOptions, final ITextureStateListener pTextureStateListener) throws IllegalArgumentException {
+	public Texture(final TextureManager pTextureManager,
+			final PixelFormat pPixelFormat,
+			final TextureOptions pTextureOptions,
+			final ITextureStateListener pTextureStateListener)
+			throws IllegalArgumentException {
 		this.mTextureManager = pTextureManager;
 		this.mPixelFormat = pPixelFormat;
 		this.mTextureOptions = pTextureOptions;
@@ -93,7 +107,8 @@ public abstract class Texture implements ITexture {
 	}
 
 	@Override
-	public void setTextureStateListener(final ITextureStateListener pTextureStateListener) {
+	public void setTextureStateListener(
+			final ITextureStateListener pTextureStateListener) {
 		this.mTextureStateListener = pTextureStateListener;
 	}
 
@@ -106,7 +121,8 @@ public abstract class Texture implements ITexture {
 	// Methods for/from SuperClass/Interfaces
 	// ===========================================================
 
-	protected abstract void writeTextureToHardware(final GLState pGLState) throws IOException;
+	protected abstract void writeTextureToHardware(final GLState pGLState)
+			throws IOException;
 
 	@Override
 	public void load() {
@@ -140,7 +156,7 @@ public abstract class Texture implements ITexture {
 
 		this.mUpdateOnHardwareNeeded = false;
 
-		if(this.mTextureStateListener != null) {
+		if (this.mTextureStateListener != null) {
 			this.mTextureStateListener.onLoadedToHardware(this);
 		}
 	}
@@ -151,7 +167,7 @@ public abstract class Texture implements ITexture {
 
 		this.mHardwareTextureID = Texture.HARDWARE_TEXTURE_ID_INVALID;
 
-		if(this.mTextureStateListener != null) {
+		if (this.mTextureStateListener != null) {
 			this.mTextureStateListener.onUnloadedFromHardware(this);
 		}
 	}

@@ -298,6 +298,10 @@ public interface IEntity extends IDrawHandler, IUpdateHandler, IDisposable {
 	public int getUpdateHandlerCount();
 	public void clearUpdateHandlers();
 
+	/**
+	 * 为这个Entity注册一个Modifier
+	 * @param pEntityModifier Modifier动作
+	 */
 	public void registerEntityModifier(final IEntityModifier pEntityModifier);
 	public boolean unregisterEntityModifier(final IEntityModifier pEntityModifier);
 	public boolean unregisterEntityModifiers(final IEntityModifierMatcher pEntityModifierMatcher);

@@ -4,7 +4,7 @@ import org.andengine.entity.IEntity;
 import org.andengine.util.modifier.SequenceModifier;
 
 /**
- * 按顺序执行传入的Modifier
+ * 按顺序执行传入的Modifier(队列方式)
  * <br>
  * <br>
  * (c) 2010 Nicolas Gramlich 

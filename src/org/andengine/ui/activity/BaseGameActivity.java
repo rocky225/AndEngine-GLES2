@@ -37,6 +37,7 @@ import android.view.Gravity;
 import android.widget.FrameLayout.LayoutParams;
 
 /**
+ * BaseGameActivity是游戏的基础，它包含一个Engine并负责完成游戏页面的初始化设定工作。<br><br>
  * (c) 2010 Nicolas Gramlich
  * (c) 2011 Zynga Inc.
  * 
