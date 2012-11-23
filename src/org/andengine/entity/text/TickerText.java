@@ -10,6 +10,8 @@ import org.andengine.util.HorizontalAlign;
 import android.opengl.GLES20;
 
 /**
+ * 打字效果显示文本
+ * <br><br>
  * (c) 2010 Nicolas Gramlich
  * (c) 2011 Zynga Inc.
  * 
@@ -36,6 +38,15 @@ public class TickerText extends Text {
 	// Constructors
 	// ===========================================================
 
+	/**
+	 * 打字效果显示文本
+	 * @param pX X坐标
+	 * @param pY Y坐标
+	 * @param pFont 字体格式
+	 * @param pText 内容
+	 * @param pTickerTextOptions TickerTextOptions属性参数
+	 * @param pVertexBufferObjectManager
+	 */
 	public TickerText(final float pX, final float pY, final IFont pFont, final String pText, final TickerTextOptions pTickerTextOptions, final VertexBufferObjectManager pVertexBufferObjectManager) {
 		super(pX, pY, pFont, pText, pTickerTextOptions, pVertexBufferObjectManager);
 
@@ -126,6 +137,11 @@ public class TickerText extends Text {
 	// Inner and Anonymous Classes
 	// ===========================================================
 
+	/**
+	 * TickerTextOptions属性参数
+	 * @author ASL
+	 *
+	 */
 	public static class TickerTextOptions extends TextOptions {
 		// ===========================================================
 		// Constants
@@ -135,7 +151,13 @@ public class TickerText extends Text {
 		// Fields
 		// ===========================================================
 
+		/**
+		 * 每秒钟多少个字
+		 */
 		/* package */ float mCharactersPerSecond;
+		/**
+		 * 是否逆转
+		 */
 		/* package */ boolean mReverse;
 
 		// ===========================================================
@@ -154,10 +176,21 @@ public class TickerText extends Text {
 			this(HorizontalAlign.LEFT, pCharactersPerSecond, pReverse);
 		}
 
+		/**
+		 * 
+		 * @param pHorizontalAlign (例如:HorizontalAlign.CENTER,居中)
+		 * @param pCharactersPerSecond 每秒钟多少个字
+		 */
 		public TickerTextOptions(final HorizontalAlign pHorizontalAlign, final float pCharactersPerSecond) {
 			this(AutoWrap.NONE, 0, pHorizontalAlign, Text.LEADING_DEFAULT, pCharactersPerSecond, false);
 		}
-
+		
+		/**
+		 * 
+		 * @param pHorizontalAlign (例如:HorizontalAlign.CENTER,居中)
+		 * @param pCharactersPerSecond 每秒钟多少个字
+		 * @param pReverse 是否倒转
+		 */
 		public TickerTextOptions(final HorizontalAlign pHorizontalAlign, final float pCharactersPerSecond, final boolean pReverse) {
 			this(AutoWrap.NONE, 0, pHorizontalAlign, Text.LEADING_DEFAULT, pCharactersPerSecond, pReverse);
 		}
