@@ -126,6 +126,12 @@ public class FontUtils {
 		throw new MethodNotYetImplementedException();
 	}
 
+	/**
+	 * 把Text内容按'\n'分为多个
+	 * @param pText Text内容
+	 * @param pResult 存储分段后的结果
+	 * @return 返回一个List<CharSequence>
+	 */
 	public static <L extends List<CharSequence>> L splitLines(final CharSequence pText, final L pResult) {
 		return TextUtils.split(pText, '\n', pResult);
 	}
@@ -215,6 +221,7 @@ public class FontUtils {
 	private static <L extends List<CharSequence>> L splitLinesByWords(final IFont pFont, final CharSequence pText, final L pResult, final float pAutoWrapWidth) {
 		final int textLength = pText.length();
 
+		//没有值就直接返回
 		if(textLength == 0) {
 			return pResult;
 		}

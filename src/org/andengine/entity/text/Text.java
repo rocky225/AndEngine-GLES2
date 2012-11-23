@@ -114,6 +114,15 @@ public class Text extends RectangularShape {
 		this(pX, pY, pFont, pText, pText.length(), pTextOptions, pVertexBufferObjectManager, pDrawType, pShaderProgram);
 	}
 
+	/**
+	 * 
+	 * @param pX X坐标
+	 * @param pY Y坐标
+	 * @param pFont 字体样式
+	 * @param pText 内容
+	 * @param pCharactersMaximum 字符最大长度
+	 * @param pVertexBufferObjectManager 
+	 */
 	public Text(final float pX, final float pY, final IFont pFont, final CharSequence pText, final int pCharactersMaximum, final VertexBufferObjectManager pVertexBufferObjectManager) {
 		this(pX, pY, pFont, pText, pCharactersMaximum, pVertexBufferObjectManager, DrawType.STATIC);
 	}
@@ -179,7 +188,9 @@ public class Text extends RectangularShape {
 	}
 
 	/**
-	 * @param pText
+	 * 改变Text内容,内容会按照'\n'分段
+	 * 
+	 * @param pText 新内容
 	 * @throws OutOfCharactersException leaves this {@link Text} object in an undefined state, until {@link Text#setText(CharSequence)} is called again and no {@link OutOfCharactersException} is thrown.
 	 */
 	public void setText(final CharSequence pText) throws OutOfCharactersException {

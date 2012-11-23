@@ -44,7 +44,7 @@ public class TickerText extends Text {
 	 * @param pY Y坐标
 	 * @param pFont 字体格式
 	 * @param pText 内容
-	 * @param pTickerTextOptions TickerTextOptions属性参数
+	 * @param pTickerTextOptions {@link TickerTextOptions}属性参数
 	 * @param pVertexBufferObjectManager
 	 */
 	public TickerText(final float pX, final float pY, final IFont pFont, final String pText, final TickerTextOptions pTickerTextOptions, final VertexBufferObjectManager pVertexBufferObjectManager) {
