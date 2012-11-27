@@ -21,6 +21,8 @@ import org.andengine.util.exception.MethodNotSupportedException;
 import android.opengl.GLES20;
 
 /**
+ * 一条直线
+ * 
  * (c) 2010 Nicolas Gramlich
  * (c) 2011 Zynga Inc.
  * 
@@ -77,12 +79,30 @@ public class Line extends Shape {
 	}
 
 	/**
+	 * 
 	 * Uses a default {@link HighPerformanceLineVertexBufferObject} in {@link DrawType#STATIC} with the {@link VertexBufferObjectAttribute}s: {@link Line#VERTEXBUFFEROBJECTATTRIBUTES_DEFAULT}.
+	 * 
+	 * @param pX1 起始点的X坐标
+	 * @param pY1 起始点的Y坐标
+	 * @param pX2 结束点的X坐标
+	 * @param pY2 结束点的Y坐标
+	 * @param pLineWidth 直线宽度
+	 * @param pVertexBufferObjectManager
 	 */
 	public Line(final float pX1, final float pY1, final float pX2, final float pY2, final float pLineWidth, final VertexBufferObjectManager pVertexBufferObjectManager) {
 		this(pX1, pY1, pX2, pY2, pLineWidth, pVertexBufferObjectManager, DrawType.STATIC);
 	}
 
+	/**
+	 * 
+	 * @param pX1 起始点的X坐标
+	 * @param pY1 起始点的Y坐标
+	 * @param pX2 结束点的X坐标
+	 * @param pY2 结束点的Y坐标
+	 * @param pLineWidth 直线宽度
+	 * @param pVertexBufferObjectManager
+	 * @param pDrawType
+	 */
 	public Line(final float pX1, final float pY1, final float pX2, final float pY2, final float pLineWidth, final VertexBufferObjectManager pVertexBufferObjectManager, final DrawType pDrawType) {
 		this(pX1, pY1, pX2, pY2, pLineWidth, new HighPerformanceLineVertexBufferObject(pVertexBufferObjectManager, Line.LINE_SIZE, pDrawType, true, Line.VERTEXBUFFEROBJECTATTRIBUTES_DEFAULT));
 	}
