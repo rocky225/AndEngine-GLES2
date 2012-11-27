@@ -95,18 +95,34 @@ public class TouchEvent {
 		return this.mAction;
 	}
 
+	/**
+	 * Touch Down 
+	 * @return TouchEvent.ACTION_DOWN=0
+	 */
 	public boolean isActionDown() {
 		return this.mAction == TouchEvent.ACTION_DOWN;
 	}
 
+	/**
+	 * Touch Up
+	 * @return TouchEvent.ACTION_UP=1
+	 */
 	public boolean isActionUp() {
 		return this.mAction == TouchEvent.ACTION_UP;
 	}
 
+	/**
+	 * Touch Move
+	 * @return TouchEvent.ACTION_MOVE=2
+	 */
 	public boolean isActionMove() {
 		return this.mAction == TouchEvent.ACTION_MOVE;
 	}
 
+	/**
+	 * Touch Cancel
+	 * @return TouchEvent.ACTION_CANCEL=3
+	 */
 	public boolean isActionCancel() {
 		return this.mAction == TouchEvent.ACTION_CANCEL;
 	}

@@ -17,6 +17,7 @@ import org.andengine.opengl.vbo.attribute.VertexBufferObjectAttributesBuilder;
 import android.opengl.GLES20;
 
 /**
+ * 视图精灵
  * (c) 2010 Nicolas Gramlich
  * (c) 2011 Zynga Inc.
  * 
@@ -58,6 +59,13 @@ public class Sprite extends RectangularShape {
 	// Constructors
 	// ===========================================================
 
+	/**
+	 * 创建一个精灵
+	 * @param pX 坐标
+	 * @param pY 坐标
+	 * @param pTextureRegion 图像
+	 * @param pVertexBufferObjectManager
+	 */
 	public Sprite(final float pX, final float pY, final ITextureRegion pTextureRegion, final VertexBufferObjectManager pVertexBufferObjectManager) {
 		this(pX, pY, pTextureRegion.getWidth(), pTextureRegion.getHeight(), pTextureRegion, pVertexBufferObjectManager, DrawType.STATIC);
 	}
