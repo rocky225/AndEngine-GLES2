@@ -20,6 +20,9 @@ import android.opengl.GLES20;
 import android.opengl.GLUtils;
 
 /**
+ * 创建片内存空间,用于存储图片,<br>
+ * 其宽必须大于所有图片的宽之和<br>
+ * 其高必须大于所有图片的高之和<br>
  * (c) 2010 Nicolas Gramlich
  * (c) 2011 Zynga Inc.
  * 
@@ -42,6 +45,10 @@ public class BitmapTextureAtlas extends TextureAtlas<IBitmapTextureAtlasSource> 
 	// ===========================================================
 
 	/**
+	 * 创建片内存空间,用于存储图片,<br>
+	 * 其宽必须大于所有图片的宽之和<br>
+	 * 其高必须大于所有图片的高之和<br>
+	 * 
 	 * Uses {@link BitmapTextureFormat#RGBA_8888}.
 	 */
 	public BitmapTextureAtlas(final TextureManager pTextureManager, final int pWidth, final int pHeight) {
@@ -49,6 +56,10 @@ public class BitmapTextureAtlas extends TextureAtlas<IBitmapTextureAtlasSource> 
 	}
 
 	/**
+	 * 创建片内存空间,用于存储图片,<br>
+	 * 其宽必须大于所有图片的宽之和<br>
+	 * 其高必须大于所有图片的高之和<br>
+	 * 
 	 * @param pBitmapTextureFormat use {@link BitmapTextureFormat#RGBA_8888} or {@link BitmapTextureFormat#RGBA_4444} for a {@link BitmapTextureAtlas} with transparency and {@link BitmapTextureFormat#RGB_565} for a {@link BitmapTextureAtlas} without transparency.
 	 */
 	public BitmapTextureAtlas(final TextureManager pTextureManager, final int pWidth, final int pHeight, final BitmapTextureFormat pBitmapTextureFormat) {
@@ -56,6 +67,10 @@ public class BitmapTextureAtlas extends TextureAtlas<IBitmapTextureAtlasSource> 
 	}
 
 	/**
+	 * 创建片内存空间,用于存储图片,<br>
+	 * 其宽必须大于所有图片的宽之和<br>
+	 * 其高必须大于所有图片的高之和<br>
+	 * 
 	 * Uses {@link BitmapTextureFormat#RGBA_8888}.
 	 *
 	 * @param pTextureStateListener to be informed when this {@link BitmapTextureAtlas} is loaded, unloaded or a {@link ITextureAtlasSource} failed to load.
@@ -65,6 +80,10 @@ public class BitmapTextureAtlas extends TextureAtlas<IBitmapTextureAtlasSource> 
 	}
 
 	/**
+	 * 创建片内存空间,用于存储图片,<br>
+	 * 其宽必须大于所有图片的宽之和<br>
+	 * 其高必须大于所有图片的高之和<br>
+	 * 
 	 * @param pBitmapTextureFormat use {@link BitmapTextureFormat#RGBA_8888} or {@link BitmapTextureFormat#RGBA_4444} for a {@link BitmapTextureAtlas} with transparency and {@link BitmapTextureFormat#RGB_565} for a {@link BitmapTextureAtlas} without transparency.
 	 * @param pTextureAtlasStateListener to be informed when this {@link BitmapTextureAtlas} is loaded, unloaded or a {@link ITextureAtlasSource} failed to load.
 	 */
@@ -73,8 +92,15 @@ public class BitmapTextureAtlas extends TextureAtlas<IBitmapTextureAtlasSource> 
 	}
 
 	/**
+	 * 创建片内存空间,用于存储图片,<br>
+	 * 其宽必须大于所有图片的宽之和<br>
+	 * 其高必须大于所有图片的高之和<br>
+	 * 
 	 * Uses {@link BitmapTextureFormat#RGBA_8888}.
 	 *
+	 * @param pTextureManager
+	 * @param pWidth 宽(必须为2^n次方)
+	 * @param pHeight 高(必须为2^n次方)
 	 * @param pTextureOptions the (quality) settings of this {@link BitmapTextureAtlas}.
 	 */
 	public BitmapTextureAtlas(final TextureManager pTextureManager, final int pWidth, final int pHeight, final TextureOptions pTextureOptions) throws IllegalArgumentException {
@@ -82,6 +108,10 @@ public class BitmapTextureAtlas extends TextureAtlas<IBitmapTextureAtlasSource> 
 	}
 
 	/**
+	 * 创建片内存空间,用于存储图片,<br>
+	 * 其宽必须大于所有图片的宽之和<br>
+	 * 其高必须大于所有图片的高之和<br>
+	 * 
 	 * @param pBitmapTextureFormat use {@link BitmapTextureFormat#RGBA_8888} or {@link BitmapTextureFormat#RGBA_4444} for a {@link BitmapTextureAtlas} with transparency and {@link BitmapTextureFormat#RGB_565} for a {@link BitmapTextureAtlas} without transparency.
 	 * @param pTextureOptions the (quality) settings of this {@link BitmapTextureAtlas}.
 	 */
@@ -90,6 +120,10 @@ public class BitmapTextureAtlas extends TextureAtlas<IBitmapTextureAtlasSource> 
 	}
 
 	/**
+	 * 创建片内存空间,用于存储图片,<br>
+	 * 其宽必须大于所有图片的宽之和<br>
+	 * 其高必须大于所有图片的高之和<br>
+	 * 
 	 * Uses {@link BitmapTextureFormat#RGBA_8888}.
 	 *
 	 * @param pTextureOptions the (quality) settings of this {@link BitmapTextureAtlas}.
@@ -100,6 +134,10 @@ public class BitmapTextureAtlas extends TextureAtlas<IBitmapTextureAtlasSource> 
 	}
 
 	/**
+	 * 创建片内存空间,用于存储图片,<br>
+	 * 其宽必须大于所有图片的宽之和<br>
+	 * 其高必须大于所有图片的高之和<br>
+	 * 
 	 * @param pBitmapTextureFormat use {@link BitmapTextureFormat#RGBA_8888} or {@link BitmapTextureFormat#RGBA_4444} for a {@link BitmapTextureAtlas} with transparency and {@link BitmapTextureFormat#RGB_565} for a {@link BitmapTextureAtlas} without transparency.
 	 * @param pTextureOptions the (quality) settings of this {@link BitmapTextureAtlas}.
 	 * @param pTextureAtlasStateListener to be informed when this {@link BitmapTextureAtlas} is loaded, unloaded or a {@link ITextureAtlasSource} failed to load.
