@@ -6,6 +6,8 @@ import org.andengine.entity.IEntity;
 /**
  * 物理效果
  * <br>
+ * 可以参考Example的AnalogOnScreenControlExample类
+ * <br>
  * (c) 2010 Nicolas Gramlich 
  * (c) 2011 Zynga Inc.
  * 
