@@ -194,7 +194,7 @@ public class Scene extends Entity {
 	 * <b>even if the {@link TouchEvent} is outside of the actual
 	 * {@link ITouchArea}</b>!
 	 * 
-	 * @param pTouchAreaBindingOnActionDownEnabled
+	 * @param pTouchAreaBindingOnActionDownEnabled 为true:将会为所有的ITouchArea发送PointerID,即使此PointerID不在其范围之内
 	 */
 	public void setTouchAreaBindingOnActionDownEnabled(
 			final boolean pTouchAreaBindingOnActionDownEnabled) {
