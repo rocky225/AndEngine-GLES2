@@ -11,6 +11,8 @@ import org.andengine.util.math.MathUtils;
 import android.util.FloatMath;
 
 /**
+ * 摇杆
+ * <br>
  * (c) 2010 Nicolas Gramlich 
  * (c) 2011 Zynga Inc.
  * 
@@ -32,12 +34,37 @@ public class AnalogOnScreenControl extends BaseOnScreenControl implements IClick
 	// Constructors
 	// ===========================================================
 
+	/**
+	 * 摇杆
+	 * 
+	 * @param pX X坐标
+	 * @param pY Y坐标
+	 * @param pCamera
+	 * @param pControlBaseTextureRegion 摇杆背景图片
+	 * @param pControlKnobTextureRegion 摇杆控制图片
+	 * @param pTimeBetweenUpdates 
+	 * @param pVertexBufferObjectManager
+	 * @param pAnalogOnScreenControlListener 控制的监听器
+	 */
 	public AnalogOnScreenControl(final float pX, final float pY, final Camera pCamera, final ITextureRegion pControlBaseTextureRegion, final ITextureRegion pControlKnobTextureRegion, final float pTimeBetweenUpdates, final VertexBufferObjectManager pVertexBufferObjectManager, final IAnalogOnScreenControlListener pAnalogOnScreenControlListener) {
 		super(pX, pY, pCamera, pControlBaseTextureRegion, pControlKnobTextureRegion, pTimeBetweenUpdates, pVertexBufferObjectManager, pAnalogOnScreenControlListener);
 
 		this.mClickDetector.setEnabled(false);
 	}
 
+	/**
+	 * 摇杆
+	 * 
+	 * @param pX X坐标
+	 * @param pY Y坐标
+	 * @param pCamera
+	 * @param pControlBaseTextureRegion 摇杆背景图片
+	 * @param pControlKnobTextureRegion 摇杆控制图片
+	 * @param pTimeBetweenUpdates 
+	 * @param pOnControlClickMaximumMilliseconds 两次点击之间的时间间隔
+	 * @param pVertexBufferObjectManager
+	 * @param pAnalogOnScreenControlListener 控制的监听器
+	 */
 	public AnalogOnScreenControl(final float pX, final float pY, final Camera pCamera, final ITextureRegion pControlBaseTextureRegion, final ITextureRegion pControlKnobTextureRegion, final float pTimeBetweenUpdates, final long pOnControlClickMaximumMilliseconds, final VertexBufferObjectManager pVertexBufferObjectManager, final IAnalogOnScreenControlListener pAnalogOnScreenControlListener) {
 		super(pX, pY, pCamera, pControlBaseTextureRegion, pControlKnobTextureRegion, pTimeBetweenUpdates, pVertexBufferObjectManager, pAnalogOnScreenControlListener);
 
