@@ -4,6 +4,8 @@ import org.andengine.engine.handler.BaseEntityUpdateHandler;
 import org.andengine.entity.IEntity;
 
 /**
+ * 物理效果
+ * <br>
  * (c) 2010 Nicolas Gramlich 
  * (c) 2011 Zynga Inc.
  * 
@@ -70,6 +72,11 @@ public class PhysicsHandler extends BaseEntityUpdateHandler {
 		this.mVelocityY = pVelocity;
 	}
 
+	/**
+	 * 设置器速度
+	 * @param pVelocityX X坐标速度值
+	 * @param pVelocityY Y坐标速度值
+	 */
 	public void setVelocity(final float pVelocityX, final float pVelocityY) {
 		this.mVelocityX = pVelocityX;
 		this.mVelocityY = pVelocityY;
