@@ -82,6 +82,12 @@ public final class SAXUtils {
 		return (value != null) ? Integer.parseInt(value) : pDefaultValue;
 	}
 
+	/**
+	 * 把参数转为Int型
+	 * @param pAttributes
+	 * @param pAttributeName
+	 * @return
+	 */
 	public static final int getIntAttributeOrThrow(final Attributes pAttributes, final String pAttributeName) {
 		return Integer.parseInt(SAXUtils.getAttributeOrThrow(pAttributes, pAttributeName));
 	}
