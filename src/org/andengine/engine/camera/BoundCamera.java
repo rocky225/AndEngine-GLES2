@@ -35,7 +35,7 @@ public class BoundCamera extends Camera {
 	// ===========================================================
 
 	/**
-	 * 一个带有内部Bound的Camera
+	 * 一个带有内部Bound的Camera,通过setBounds和setBoundsEnabled(true)来设置Bound和启用Bound
 	 * @param pX
 	 * @param pY
 	 * @param pWidth
