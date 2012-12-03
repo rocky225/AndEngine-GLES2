@@ -1,6 +1,8 @@
 package org.andengine.engine.camera;
 
 /**
+ * 一个带有内部Bound的Camera
+ * 
  * (c) 2010 Nicolas Gramlich (c) 2011 Zynga Inc.
  * 
  * @author Nicolas Gramlich
@@ -33,7 +35,7 @@ public class BoundCamera extends Camera {
 	// ===========================================================
 
 	/**
-	 * 
+	 * 一个带有内部Bound的Camera
 	 * @param pX
 	 * @param pY
 	 * @param pWidth
@@ -45,7 +47,7 @@ public class BoundCamera extends Camera {
 	}
 
 	/**
-	 * 
+	 * 一个带有内部Bound的Camera
 	 * @param pX
 	 * @param pY
 	 * @param pWidth
@@ -148,7 +150,7 @@ public class BoundCamera extends Camera {
 
 	protected void ensureInBounds() {
 		final float centerX;
-		//如果Bound的长度小于Camare的长度
+		//如果Bound的长度小于Camera的长度
 		if (this.mBoundsWidth < this.getWidth()) {
 			//取Bound的中点
 			centerX = this.mBoundsCenterX;
@@ -156,7 +158,7 @@ public class BoundCamera extends Camera {
 			centerX = getBoundedX(this.getCenterX());
 		}
 		final float centerY;
-		//如果Bound的高小于Camare的高
+		//如果Bound的高小于Camera的高
 		if (this.mBoundsHeight < this.getHeight()) {
 			//取Bound的中点
 			centerY = this.mBoundsCenterY;
@@ -169,7 +171,7 @@ public class BoundCamera extends Camera {
 	/**
 	 * 把X点转为Bound内的点X1
 	 * 
-	 * @param pX Camare中的点X
+	 * @param pX Camera中的点X
 	 * @return Bound仲的点X1
 	 */
 	protected float getBoundedX(final float pX) {
@@ -179,9 +181,9 @@ public class BoundCamera extends Camera {
 		final float maxXBoundExceededAmount = this.getXMax() - this.mBoundsXMax;
 		final boolean maxXBoundExceeded = maxXBoundExceededAmount > 0;
 
-		//当Bound的X最小值>Camare的X最小值
+		//当Bound的X最小值>Camera的X最小值
 		if (minXBoundExceeded) {
-			//Bound的X最大值<Camare的X最大值
+			//Bound的X最大值<Camera的X最大值
 			if (maxXBoundExceeded) {
 				/* Min and max X exceeded. */
 				return pX - maxXBoundExceededAmount + minXBoundExceededAmount;
@@ -190,7 +192,7 @@ public class BoundCamera extends Camera {
 				return pX + minXBoundExceededAmount;
 			}
 		} else {
-			//Bound的X最大值<Camare的X最大值
+			//Bound的X最大值<Camera的X最大值
 			if (maxXBoundExceeded) {
 				/* Only max X exceeded. */
 				return pX - maxXBoundExceededAmount;
@@ -204,7 +206,7 @@ public class BoundCamera extends Camera {
 	/**
 	 * 把Y点转为Bound内的点Y1
 	 * 
-	 * @param pY Camare中的点Y
+	 * @param pY Camera中的点Y
 	 * @return Bound仲的点Y1
 	 */
 	protected float getBoundedY(final float pY) {
